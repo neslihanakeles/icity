@@ -51,6 +51,8 @@ flutter:
     - dosyalar/images/food.jpg
     - dosyalar/images/tarih.jpg
     - dosyalar/images/yerel.jpg
+    - dosyalar/images/notification.png
+    - dosyalar/images/user.png
 
 
   # To add assets to your application, add an assets section, like this:

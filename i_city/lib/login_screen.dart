@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:icity/home_screen.dart';
+import 'package:icity/profile_screen.dart';
+import 'package:icity/register_screen.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -169,8 +171,8 @@ class _LoginScreenState extends State<LoginScreen> {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 60.0,
-        width: 60.0,
+        height: 50.0,
+        width: 50.0,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
@@ -213,31 +215,23 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget _buildSignupBtn() {
-    return GestureDetector(
-      onTap: () => print('Sign Up Button Pressed'),
-      child: RichText(
-        text: TextSpan(
-          children: [
-            TextSpan(
-              text: 'Hesabın Yok Mu? ',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            TextSpan(
-              text: 'Aramıza Katıl',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+    return Center(
+      child: Column(
+        children: <Widget>[
+          // Default halinde arkaplanı olmayan buton
+          FlatButton(
+            child: Text("Hesabın Yok Mu ? ARAMIZA KATIL", style: TextStyle(fontSize: 15.0,
+                fontWeight: FontWeight.bold),),
+//            onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen()),);},
+              onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()),);},
+            textColor: Colors.black,
+          ),
+
           ],
         ),
-      ),
-    );
+
+      );
+
   }
 
   @override
@@ -257,8 +251,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Colors.indigo[900],
-                      Colors.indigo[600],
+                      Colors.indigo[700],
+                      Colors.indigo[500],
                       Colors.indigo[400],
                       Colors.indigo[300],
                     ],
